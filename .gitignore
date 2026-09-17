@@ -1,0 +1,7 @@
+# VS Code local state
+.vscode/
+*.code-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
