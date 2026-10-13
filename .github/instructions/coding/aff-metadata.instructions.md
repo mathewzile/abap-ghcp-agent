@@ -1,7 +1,7 @@
 ---
 name: "ABAP File Format Metadata"
 description: "Use when inspecting or editing AFF JSON metadata or the .jsonc virtual representation exposed by ABAP Development Tools for VS Code."
-applyTo: "**/*.json,**/*.jsonc"
+applyTo: "**/*.*.json,**/*.*.jsonc"
 ---
 # AFF Metadata Instructions
 

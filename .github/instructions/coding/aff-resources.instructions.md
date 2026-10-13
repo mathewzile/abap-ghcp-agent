@@ -1,7 +1,7 @@
 ---
 name: "ABAP File Format Resources"
 description: "Use when editing AFF text resources, CSN models, or form resources represented by .properties, .csn, or .xdp files."
-applyTo: "**/*.properties,**/*.csn,**/*.xdp"
+applyTo: "**/*.*.properties,**/*.csn,**/*.xdp"
 ---
 # AFF Resource Instructions
 

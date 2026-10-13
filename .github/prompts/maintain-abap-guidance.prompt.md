@@ -28,8 +28,9 @@ Preserve this separation of concerns:
 
 - [Root Copilot instructions](../copilot-instructions.md): discovery and routing only, including the ABAP virtual filesystem, ADT MCP lifecycle operations, AFF source-of-truth, unsupported-object handling, scoped-instruction routing, and skill precedence.
 - [File-specific instructions](../instructions/): concise `applyTo` routing and object/file workflow only. They may identify the applicable skills, owning object, editor or lifecycle operation, and validation path. They must not contain development guidelines, coding standards, style rules, architecture rules, security rules, testing standards, or duplicated source material.
-- [Project ABAP Development Guide skill](../../.agents/skills/abap-development-guide/SKILL.md): project-specific development standards translated and curated from the ABAP Development Guide, including precedence and links to focused references.
-- [Clean ABAP skill](../../.agents/skills/clean-abap/SKILL.md): general Clean ABAP standards derived from the canonical SAP guide, with links to focused references.
+- [Project ABAP Development Guide skill](../skills/abap-development-guide/SKILL.md): project-specific development standards translated and curated from the ABAP Development Guide, including precedence and links to focused references.
+- [Clean ABAP skill](../skills/clean-abap/SKILL.md): general Clean ABAP standards derived from the canonical SAP guide, with links to focused references.
+- [Modern ABAP Developer agent](../agents/modern-abap-developer.agent.md): role, scope boundary, context budget, and validation gate. It routes to skills and must not contain development standards.
 
 Project-specific guidance takes precedence over Clean ABAP. Keep this as an authority rule; do not rely on instruction loading order.
 

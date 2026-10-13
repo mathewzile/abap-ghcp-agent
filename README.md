@@ -4,7 +4,8 @@ A reusable Visual Studio Code workspace for agent-assisted SAP ABAP development 
 
 - Repository-wide Copilot routing in `.github/`
 - File-specific ABAP File Format (AFF) instructions
-- Project ABAP and Clean ABAP skills in `.agents/`
+- Project ABAP and Clean ABAP skills in `.github/skills/`
+- A `modern-abap-developer` agent in `.github/agents/`
 - Guidance for an ADT-compatible multi-root workspace
 
 Development standards live in skills. Root and file-specific instructions provide discovery, object routing, AFF handling, and validation workflow.
@@ -29,18 +30,19 @@ The SAP extension supports RFC connections for on-premise or private-cloud syste
 5. Run `ABAP: Add Destination as Folder to Workspace...` or add the required package.
 6. Save the workspace when prompted.
 
-Keep these support folders as the first two entries in `abap.code-workspace`:
+Keep the repository root as the first entry in `abap.code-workspace`. Copilot resolves `.github/` relative to each workspace folder, so the root folder must be the one that contains `.github/`:
 
 ```jsonc
 {
   "folders": [
-    { "path": ".github" },
-    { "path": ".agents" }
+    { "name": "ABAP Copilot Workspace", "path": "." }
   ]
 }
 ```
 
-Every entry after them must be a developer-defined, connected SAP destination, for example:
+Do not add `.github` itself as a workspace folder. That nests the lookup to `.github/.github/` and silently disables every instruction, skill, and agent.
+
+Every entry after it must be a developer-defined, connected SAP destination, for example:
 
 ```jsonc
 {
@@ -57,8 +59,10 @@ The workspace discovery path is:
 
 1. `.github/copilot-instructions.md` routes virtual-filesystem, ADT MCP, AFF, and skill discovery.
 2. `.github/instructions/` applies object and extension-specific workflow instructions.
-3. `.agents/skills/abap-development-guide/` supplies project development standards.
-4. `.agents/skills/clean-abap/` supplies general Clean ABAP guidance when it does not conflict with the project guide.
+3. `.github/skills/abap-development-guide/` supplies project development standards.
+4. `.github/skills/clean-abap/` supplies general Clean ABAP guidance when it does not conflict with the project guide.
+
+Select the `modern-abap-developer` agent in Copilot Chat for ABAP work. It adds a scope boundary, an ordered context budget so only the needed guidance is loaded, and an activation, test, and ATC validation gate.
 
 Locate ABAP objects through the ABAP Explorer directory or package before asking Copilot to inspect or modify them. The SAP extension exposes repository objects through a virtual filesystem, so ordinary local filesystem search cannot discover every object.
 
