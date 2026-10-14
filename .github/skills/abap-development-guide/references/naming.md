@@ -52,9 +52,10 @@ Use `Z` (or `Y` where the project uses it) followed by the type prefix and a des
 | CDS abstract entity | `ZA_<name>` | 30 | `ZA_OrderCancelParam` |
 | Metadata extension / access control | Same as the CDS entity | 30 | `ZC_SalesOrder` |
 | Behavior definition | Same as the root entity | 30 | `ZR_SalesOrder` |
-| Behavior pool | `ZBP_<root entity>` | 30 | `ZBP_R_SalesOrder` |
-| Service definition | `ZUI_<name>` (UI) / `ZAPI_<name>` (API) | 30 | `ZUI_SalesOrder` |
-| Service binding | `<service definition>_O4` / `_O2` / `_V4` / `_V2` | 26 | `ZUI_SalesOrder_O4` |
+| Behavior pool | `ZBP_<root entity without leading Z>` | 30 | `ZBP_R_SalesOrder` |
+| Service definition | `ZUI_` (Fiori UI) / `ZAPI_` (Web API) / `ZIA_` (InA) / `ZSQL_` (SQL) + `<name>` | 30 | `ZUI_SalesOrder`, `ZAPI_SalesOrder` |
+| Service binding (OData) | `ZUI_<name>` / `ZAPI_<name>` + `_O2` (OData V2) / `_O4` (OData V4) | 26 | `ZUI_SalesOrder_O4`, `ZAPI_SalesOrder_O2` |
+| Service binding (InA / SQL) | `ZIA_<name>` / `ZSQL_<name>` | 26 | `ZIA_SalesOrder`, `ZSQL_SalesOrder` |
 | Message class | `Z<name>` | 20 | `ZSD_ORDER` |
 | Lock object | `EZ<table>` | 16 | `EZSD_ORDER` |
 | Authorization object | `Z<name>` | 10 | `ZSD_ORDER` |

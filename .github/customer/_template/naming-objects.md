@@ -23,10 +23,19 @@ Source: <!-- optional, e.g. customer development guideline v2.1 -->
 | CDS interface view | `ZI_<module>_<name>` | 30 | `ZI_SD_SalesOrder` |
 | CDS RAP root view | `ZR_<module>_<name>` | 30 | `ZR_SD_SalesOrder` |
 | CDS projection view | `ZC_<module>_<name>` | 30 | `ZC_SD_SalesOrder` |
-| Behavior pool | `ZBP_<root entity>` | 30 | `ZBP_R_SD_SalesOrder` |
-| Service definition | `ZUI_<module>_<name>` | 30 | `ZUI_SD_SalesOrder` |
-| Service binding | `<service definition>_O4` | 26 | `ZUI_SD_SalesOrder_O4` |
+| Behavior definition | Same as the root entity | 30 | `ZR_SD_SalesOrder` |
+| Behavior pool | `ZBP_<root entity without leading Z>` | 30 | `ZBP_R_SD_SalesOrder` |
+| Service definition (Fiori UI) | `ZUI_<module>_<name>` | 30 | `ZUI_SD_SalesOrder` |
+| Service definition (Web API) | `ZAPI_<module>_<name>` | 30 | `ZAPI_SD_SalesOrder` |
+| Service definition (InA) | `ZIA_<module>_<name>` | 30 | `ZIA_SD_SalesOrder` |
+| Service definition (SQL) | `ZSQL_<module>_<name>` | 30 | `ZSQL_SD_SalesOrder` |
+| Service binding (OData UI) | `ZUI_<module>_<name>_O2` / `_O4` | 26 | `ZUI_SD_SalesOrder_O4` |
+| Service binding (OData Web API) | `ZAPI_<module>_<name>_O2` / `_O4` | 26 | `ZAPI_SD_SalesOrder_O4` |
+| Service binding (InA) | `ZIA_<module>_<name>` | 26 | `ZIA_SD_SalesOrder` |
+| Service binding (SQL) | `ZSQL_<module>_<name>` | 26 | `ZSQL_SD_SalesOrder` |
 | Message class | `Z<module>_<name>` | 20 | `ZSD_ORDER` |
 | Authorization object | `Z<module><name>` | 10 | `ZSDORDER` |
 
 Module codes: <!-- e.g. SD = Sales, MM = Materials Management, FI = Finance -->
+
+<!-- Service binding max is 26: keep OData service definition names at 23 or fewer characters so the _O2/_O4 suffix fits. -->
