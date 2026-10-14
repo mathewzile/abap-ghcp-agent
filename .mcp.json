@@ -1,8 +1,16 @@
 {
-	"mcpServers": {
-		"abap-docs-mcp": {
-			"url": "https://mcp-abap.marianzeis.de/mcp",
-			"type": "http"
-		}
-	}
+  "mcpServers": {
+    "abap-docs-mcp": {
+      "url": "https://mcp-abap.marianzeis.de/mcp",
+      "type": "http"
+    },
+    "rosa-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@rosa-mcp/server",
+        "-y"
+      ]
+    }
+  }
 }
