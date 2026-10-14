@@ -33,6 +33,17 @@ Do not preload both skills or their references. Apply guidance silently; do not 
 - Never fabricate a representation for an object the virtual file marks unsupported. Route it to ADT for Eclipse or SAP GUI.
 - Make the smallest change that satisfies the request. Do not refactor, reformat, or clean up unrelated code.
 - Preserve public contracts, package boundaries, naming prefixes, and backend release constraints.
+- When given an architect work package, deliver exactly that package and verify its acceptance criteria.
+
+## Test-first
+
+When adding or changing behavior in ABAP classes, work red → green one vertical slice at a time:
+
+1. Agree the seams under test: the public interfaces the tests exercise. Use the seams from the architect handoff when present; otherwise propose each with a one-line note on what it catches and confirm before writing tests.
+2. Write one ABAP Unit test at a seam and run it to confirm it fails for the expected reason.
+3. Write only enough production code to make it pass, then take the next slice.
+
+Tests exercise behavior through the public interface. Replace dependencies through injected interfaces and the CDS or SQL test double frameworks, per the `clean-abap` ABAP Unit reference. Take expected values from an independent source: a literal, a worked example, or the requirement.
 
 ## Validation gate
 
