@@ -29,6 +29,7 @@ Do not preload both skills or their references. Apply guidance silently; do not 
 
 - Locate objects through the ABAP Explorer directory or package before searching or opening virtual files.
 - Use the ADT MCP server for creation, validation, activation, unit tests, and ATC runs.
+- Before creating or generating objects or declaring variables, resolve naming for the target destination per the `abap-development-guide` naming reference.
 - Follow SAP ABAP File Formats (https://github.com/SAP/abap-file-formats) for filenames, extensions, schemas, and the source/metadata split.
 - Never fabricate a representation for an object the virtual file marks unsupported. Route it to ADT for Eclipse or SAP GUI.
 - Make the smallest change that satisfies the request. Do not refactor, reformat, or clean up unrelated code.

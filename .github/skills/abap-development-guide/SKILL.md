@@ -1,6 +1,6 @@
 ---
 name: abap-development-guide
-description: Apply the project ABAP Development Guide when developing, reviewing, testing, securing, or deploying SAP ABAP. Use this skill for project-specific rules; it takes precedence over general Clean ABAP guidance.
+description: Apply the project ABAP Development Guide when developing, reviewing, testing, securing, naming, or deploying SAP ABAP. Use this skill for project-specific rules and customer naming conventions; it takes precedence over general Clean ABAP guidance.
 ---
 
 # Project ABAP Development Guide
@@ -9,7 +9,7 @@ This skill represents the project-specific development standard. Use it before `
 
 ## Authority and precedence
 
-1. Explicit project instructions and object-specific conventions.
+1. Explicit project instructions, object-specific conventions, and customer naming conventions resolved through [Naming conventions](./references/naming.md).
 2. The project ABAP Development Guide supplied as `SAP-Guide-ABAP-English-Version.pdf`.
 3. SAP framework and release constraints.
 4. SAP Clean ABAP guidance.
@@ -25,6 +25,7 @@ When two rules conflict, follow the higher-priority source and mention the confl
 
 ## Topic references
 
+- [Naming conventions](./references/naming.md) resolves customer naming profiles per ADT destination and supplies default object names.
 - [Guide overview](./references/guide-overview.md) maps the guide's chapters and the intended development lifecycle.
 - [Modern ABAP and architecture](./references/modern-abap-and-architecture.md) covers the Modern ABAP, package, OO, Clean ABAP, and RAP chapters.
 - [Testing, ALM, and quality](./references/testing-alm-and-quality.md) covers ABAP Unit, quality assurance, ALM, version control, and release gates.

@@ -83,7 +83,7 @@ Use evidence in this order:
 
 Record enough evidence for another developer to repeat each decisive check. Cross-check specific objects with object-detail lookup after discovery. Prefer a released Level A API; allow Level B only when the target deployment and project policy permit it, and explain the constraint. Do not recommend Level C or D dependencies as Clean Core compliant.
 
-Derive repository-object names from the selected project's established naming convention. Inspect neighboring objects in the intended package or application area and preserve customer namespace, object-type prefix, module prefix, semantic role, and length limits. Propose exact names when the convention and business term are known. If no convention can be established, use an explicit placeholder such as `<namespace>` or `<module>` and make naming confirmation an open decision; do not invent a customer prefix.
+Derive repository-object names from the customer naming profile for the verified destination, resolved per the `abap-development-guide` naming reference. Where the profile is silent, use the selected project's established convention. Inspect neighboring objects in the intended package or application area and preserve customer namespace, object-type prefix, module prefix, semantic role, and length limits. Propose exact names when the convention and business term are known. If no convention can be established, use an explicit placeholder such as `<namespace>` or `<module>` and make naming confirmation an open decision; do not invent a customer prefix.
 
 ## AI-agent feasibility
 

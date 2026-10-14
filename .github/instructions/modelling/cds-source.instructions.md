@@ -6,6 +6,7 @@ applyTo: "**/*.acds"
 # ABAP CDS Source Instructions
 
 - Use the `abap-development-guide` skill first, especially its Clean Core, CDS, integration, and security guidance; use the `clean-abap` skill second where applicable.
+- Resolve CDS, service, and access control names through the `abap-development-guide` naming reference; customer conventions take precedence.
 - Use released CDS entities and annotations, preserve layering and package boundaries, and avoid direct dependencies on unreleased implementation objects.
 - Keep authorization, data volume, association cardinality, and database performance explicit in the design.
 - After changes, run the narrowest available syntax and activation checks, relevant tests, and ATC checks.

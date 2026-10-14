@@ -2,6 +2,10 @@
 .vscode/
 *.code-workspace
 
+# Customer naming profiles (keep templates)
+.github/customer/*
+!.github/customer/_template/
+
 # Operating system files
 .DS_Store
 Thumbs.db

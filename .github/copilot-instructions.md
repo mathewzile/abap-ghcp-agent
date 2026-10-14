@@ -6,4 +6,5 @@
 - Do not invent or manually fabricate an AFF representation for an unsupported object. Use ABAP Development Tools for Eclipse or SAP GUI when the virtual file identifies the object as unsupported.
 - File-specific guidance under `.github/instructions/` applies by AFF extension.
 - For ABAP development or review, use the `abap-development-guide` skill first and the `clean-abap` skill second.
+- Before proposing, creating, generating, or reviewing ABAP names, resolve the customer naming profile for the target ADT destination per `.github/skills/abap-development-guide/references/naming.md`.
 - To identify SAP objects or APIs, determine their Clean Core level or release state, find successors, or check Clean Core compliance, use the `rosa-global` skill with the `rosa-mcp` server.

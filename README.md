@@ -70,6 +70,17 @@ Enable the ADT MCP server in the ABAP Development Tools settings when agentic ob
 
 Objects marked as unsupported by ABAP Development Tools for VS Code must be edited with ABAP Development Tools for Eclipse or SAP GUI.
 
+## Customer Naming Conventions
+
+Customer naming conventions override the workspace defaults. Customer files are gitignored; only `.github/customer/_template/` is committed.
+
+1. Copy `.github/customer/_template/systems.md` to `.github/customer/systems.md` and add one row per ADT destination ID (the segment after `abap:/repotree-v1/`), with its role (DEV/QAS/PRD) and a profile name. Several destinations can share one profile.
+2. For each profile, copy `naming-objects.md` and/or `naming-variables.md` from the template to `.github/customer/<profile>/` and adapt every row you use. Maintain all object types in use so one package does not mix customer and default styles.
+
+How it works: Copilot maps the target destination to its profile and applies customer rules per object type or variable kind. Anything not maintained falls back to defaults: Clean ABAP (no Hungarian notation) for variables, and `Z` + type prefix (`ZCL_`, `ZIF_`, `ZI_`, ...) for objects. Fallback names are flagged; set `Unlisted types: ask` in a profile to be asked instead. Unmapped destinations use defaults and Copilot says so. Rules and defaults live in `.github/skills/abap-development-guide/references/naming.md`.
+
+To re-verify the setup end to end, run `/verify-naming-conventions <destination>` in Copilot Chat.
+
 ## ABAP File Formats
 
 Repository representations follow [SAP ABAP File Formats](https://github.com/SAP/abap-file-formats). The scoped instructions cover ABAP source, CDS, RAP behavior, DDIC, XSLT, metadata, and related AFF resources supported by this workspace.

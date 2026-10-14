@@ -2,6 +2,8 @@
 
 ## Names
 
+Customer naming conventions take precedence over every rule in this section; resolve them through `abap-development-guide/references/naming.md`.
+
 - Use descriptive, pronounceable names that convey meaning and use solution-domain or business-domain terminology.
 - Prefer consistent `snake_case` for local names, interfaces, methods, and variables where project conventions allow it.
 - Use nouns or noun phrases for classes and interfaces; use verbs or verb phrases for methods. Boolean methods commonly start with `is_`, `has_`, or `can_`.
